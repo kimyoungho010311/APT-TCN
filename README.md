@@ -50,7 +50,7 @@
 ![System Architecture](https://github.com/kimyoungho010311/APT-TCN/blob/main/images/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A4-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90%20%EC%84%A4%EA%B3%84%20%EC%B5%9C%EC%A2%85.jpg?raw=true)
 
 * **정형 인코더 (MLP):** 아파트 특성 및 거시 경제지표의 비선형적 관계 학습 (64차원 벡터로 압축)
-* **비정형 인코더 (ResNet-50):** 위성 이미지에서 공간/시각적 특징 추출 (차원의 저주 방지를 위해 2048차원 → 32차원으로 압축)
+* **비정형 인코더 (ResNet-50):** 위성 이미지에서 공간/시각적 특징 추출 (차원의 저주 방지를 위해 PCA 기법을 사용하여 2048차원 → 32차원으로 압축)
 * **특징 융합 (Fusion Layer):** 두 벡터를 결합하여 시계열 모델(TCN)의 입력으로 사용
 
 ### 2.2 데이터 구성 및 전처리
